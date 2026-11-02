@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>濟州島親子環島行程 2026.11.25–29</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Gowun+Batang:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2A2520;
+  --paper:#FBF6EC;
+  --paper-soft:#F4EBD8;
+  --tangerine:#E8762C;
+  --tangerine-deep:#C2531A;
+  --ocean:#1F4E5F;
+  --ocean-soft:#DCEAEA;
+  --basalt:#2D2A26;
+  --leaf:#5C7A52;
+  --leaf-soft:#E5EDDD;
+  --sand:#E8D9B8;
+  --line:#D8C9A8;
+  --star:#C2531A;
+  --shadow: 0 4px 18px rgba(42,37,32,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Noto Sans TC', sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.font-display{font-family:'Noto Serif TC', serif;}
+
+/* ===== texture ===== */
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(42,37,32,0.035) 1px, transparent 0);
+  background-size: 18px 18px;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  padding:5rem 1.5rem 6rem;
+  background: linear-gradient(160deg, #1F4E5F 0%, #16394A 55%, #0E2A38 100%);
+  color:var(--paper);
+  overflow:hidden;
+  text-align:center;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  bottom:-2px;left:0;right:0;
+  height:60px;
+  background:var(--paper);
+  clip-path: polygon(0 100%, 100% 100%, 100% 40%, 92% 55%, 84% 35%, 76% 58%, 68% 32%, 60% 60%, 52% 30%, 44% 55%, 36% 28%, 28% 58%, 20% 32%, 12% 60%, 4% 30%, 0 50%);
+}
+.hero-eyebrow{
+  font-size:0.8rem;
+  letter-spacing:0.32em;
+  text-transform:uppercase;
+  color:#F2C879;
+  font-weight:600;
+  margin-bottom:1.4rem;
+}
+.hero h1{
+  font-size:clamp(2.1rem, 5.5vw, 3.6rem);
+  font-weight:700;
+  letter-spacing:0.02em;
+  margin-bottom:1rem;
+  line-height:1.35;
+}
+.hero h1 .accent{color:#F2C879;}
+.hero p.sub{
+  font-size:1.05rem;
+  color:#CFE3E3;
+  max-width:560px;
+  margin:0 auto 2.2rem;
+  font-weight:300;
+}
+.flight-pills{
+  display:flex;
+  gap:0.8rem;
+  justify-content:center;
+  flex-wrap:wrap;
+  position:relative;
+  z-index:2;
+}
+.pill{
+  background:rgba(250,246,240,0.1);
+  border:1px solid rgba(242,200,121,0.45);
+  border-radius:100px;
+  padding:0.55rem 1.3rem;
+  font-size:0.85rem;
+  color:#F4EBD8;
+  backdrop-filter:blur(4px);
+}
+.pill b{color:#F2C879;}
+
+/* ===== MUST-SEE STRIP ===== */
+.muststrip{
+  background:var(--paper);
+  padding:0 1.5rem 3rem;
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+.must-label{
+  font-size:0.78rem;
+  letter-spacing:0.28em;
+  text-transform:uppercase;
+  color:var(--tangerine-deep);
+  font-weight:600;
+  margin-bottom:1rem;
+}
+.must-grid{
+  display:flex;
+  gap:0.7rem;
+  justify-content:center;
+  flex-wrap:wrap;
+  max-width:760px;
+  margin:0 auto;
+}
+.must-chip{
+  background:var(--paper-soft);
+  border:1.5px solid var(--tangerine);
+  color:var(--tangerine-deep);
+  font-weight:600;
+  font-size:0.88rem;
+  padding:0.5rem 1.1rem;
+  border-radius:10px;
+}
+
+/* ===== SECTION WRAP ===== */
+.wrap{max-width:880px;margin:0 auto;padding:0 1.5rem;}
+section{position:relative;z-index:1;}
+
+.section-head{text-align:center;margin-bottom:2.2rem;}
+.section-head .eyebrow{
+  font-size:0.78rem;letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--ocean);font-weight:600;margin-bottom:0.6rem;
+}
+.section-head h2{font-size:1.9rem;font-weight:700;}
+
+/* ===== DAY TIMELINE ===== */
+.day-block{padding:3rem 0;}
+.day-flag{
+  display:inline-flex;
+  align-items:baseline;
+  gap:0.8rem;
+  margin-bottom:0.4rem;
+}
+.day-num{
+  font-family:'Gowun Batang', serif;
+  font-size:2.6rem;
+  font-weight:700;
+  line-height:1;
+}
+.day-date{font-size:0.85rem;color:#7a7163;letter-spacing:0.05em;}
+.day-region{
+  font-size:1.5rem;
+  font-weight:700;
+  margin-bottom:1.8rem;
+}
+
+/* color themes per day */
+.theme-west .day-num,.theme-west .day-region{color:var(--ocean);}
+.theme-west .timeline-bar{background:var(--ocean);}
+.theme-south .day-num,.theme-south .day-region{color:var(--leaf);}
+.theme-south .timeline-bar{background:var(--leaf);}
+.theme-city .day-num,.theme-city .day-region{color:var(--tangerine-deep);}
+.theme-city .timeline-bar{background:var(--tangerine-deep);}
+
+.timeline{position:relative;padding-left:2.2rem;}
+.timeline-bar{
+  position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+  opacity:0.35;
+}
+.tl-item{position:relative;padding-bottom:1.7rem;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-dot{
+  position:absolute;left:-2.2rem;top:0.25rem;
+  width:16px;height:16px;border-radius:50%;
+  border:3px solid var(--paper);
+  box-shadow:0 0 0 1.5px currentColor;
+}
+.theme-west .tl-dot{color:var(--ocean);}
+.theme-south .tl-dot{color:var(--leaf);}
+.theme-city .tl-dot{color:var(--tangerine-deep);}
+.tl-dot.must{background:var(--star);box-shadow:0 0 0 4px rgba(194,83,26,0.18);}
+.tl-time{
+  font-size:0.78rem;font-weight:600;letter-spacing:0.04em;
+  color:#8a8073;margin-bottom:0.25rem;
+}
+.tl-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1rem 1.2rem;
+  box-shadow:0 2px 8px rgba(42,37,32,0.04);
+}
+.tl-card.must-card{
+  border-color:var(--tangerine);
+  background:linear-gradient(135deg,#fff 60%, #FFF3E8 100%);
+}
+.tl-name{font-size:1.02rem;font-weight:700;margin-bottom:0.3rem;display:flex;align-items:center;gap:0.45rem;flex-wrap:wrap;}
+.star-badge{
+  font-size:0.68rem;background:var(--star);color:#fff;
+  padding:0.15rem 0.5rem;border-radius:6px;font-weight:700;letter-spacing:0.03em;
+}
+.tl-desc{font-size:0.9rem;color:#4d463c;margin-bottom:0.5rem;}
+.tl-meta{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.4rem;}
+.tag{
+  font-size:0.74rem;font-weight:600;padding:0.18rem 0.6rem;border-radius:20px;
+}
+.tag.spicy-free{background:var(--leaf-soft);color:#3F5536;}
+.tag.note{background:var(--paper-soft);color:#6b6052;}
+.tag.warn{background:#FBE6D6;color:#8C4A1C;}
+.tl-tel{font-size:0.82rem;color:var(--ocean);font-weight:600;}
+.tl-tel a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--ocean);}
+.warn-box{
+  margin-top:0.5rem;background:#FFF7E8;border-left:3px solid #E8A23C;
+  padding:0.5rem 0.8rem;font-size:0.82rem;color:#7A5417;border-radius:0 8px 8px 0;
+}
+
+/* ===== AIRBNB / HOTEL SECTION ===== */
+.stay-section{padding:3rem 0 4rem;}
+.stay-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.1rem;margin-top:1.6rem;
+}
+.stay-card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:1.3rem;box-shadow:var(--shadow);
+}
+.stay-card .stay-label{
+  font-size:0.72rem;font-weight:700;letter-spacing:0.05em;
+  color:#fff;background:var(--ocean);display:inline-block;
+  padding:0.25rem 0.7rem;border-radius:7px;margin-bottom:0.7rem;
+}
+.stay-card.hotel .stay-label{background:var(--tangerine-deep);}
+.stay-card h4{font-size:1.05rem;margin-bottom:0.45rem;}
+.stay-card p{font-size:0.85rem;color:#5a5246;}
+.stay-card .kw{
+  display:block;margin-top:0.6rem;font-size:0.78rem;color:#8a8073;
+  background:var(--paper-soft);padding:0.5rem 0.6rem;border-radius:8px;font-family:monospace;
+}
+
+/* ===== TIPS ===== */
+.tips-section{padding:1rem 0 5rem;}
+.tip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1.6rem;}
+.tip-card{
+  background:var(--paper-soft);border-radius:14px;padding:1.2rem 1.3rem;
+  border-left:4px solid var(--tangerine);
+}
+.tip-card h4{font-size:0.95rem;margin-bottom:0.4rem;color:var(--tangerine-deep);}
+.tip-card p{font-size:0.85rem;color:#4d463c;}
+
+footer{
+  text-align:center;padding:2.5rem 1.5rem 3.5rem;
+  color:#8a8073;font-size:0.82rem;
+  border-top:1px solid var(--line);
+}
+
+/* ===== DAY QUICK NAV ===== */
+.day-nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(251,246,236,0.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 2px 12px rgba(42,37,32,0.06);
+}
+.day-nav-inner{
+  max-width:880px;margin:0 auto;
+  display:flex;align-items:center;gap:0.5rem;
+  padding:0.55rem 1.5rem;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.day-nav-inner::-webkit-scrollbar{display:none;}
+.day-nav-label{
+  font-size:0.72rem;font-weight:600;
+  color:#8a8073;letter-spacing:0.08em;text-transform:uppercase;
+  white-space:nowrap;margin-right:0.3rem;flex-shrink:0;
+}
+.day-nav-btn{
+  display:flex;flex-direction:column;align-items:center;
+  text-decoration:none;
+  padding:0.35rem 0.9rem;
+  border-radius:10px;
+  transition:background 0.15s,transform 0.1s;
+  white-space:nowrap;flex-shrink:0;
+  border:1px solid transparent;
+}
+.day-nav-btn:hover{transform:translateY(-1px);}
+.day-nav-btn.west{background:var(--ocean-soft);border-color:#b0ced4;}
+.day-nav-btn.west:hover{background:#c7e0e4;}
+.day-nav-btn.south{background:var(--leaf-soft);border-color:#bdd4b5;}
+.day-nav-btn.south:hover{background:#d0e5c8;}
+.day-nav-btn.city{background:#FFF3E8;border-color:#f0c89a;}
+.day-nav-btn.city:hover{background:#ffe5cc;}
+.day-nav-num{
+  font-size:0.82rem;font-weight:700;line-height:1.2;
+  color:var(--ink);
+}
+.day-nav-btn.west .day-nav-num{color:var(--ocean);}
+.day-nav-btn.south .day-nav-num{color:var(--leaf);}
+.day-nav-btn.city .day-nav-num{color:var(--tangerine-deep);}
+.day-nav-sub{
+  font-size:0.67rem;color:#6b6052;line-height:1.2;margin-top:1px;
+}
+@media(max-width:560px){
+  .day-nav-sub{display:none;}
+  .day-nav-btn{padding:0.4rem 0.75rem;}
+}
+
+@media (max-width:560px){
+  .hero{padding:4rem 1.2rem 5rem;}
+  .day-num{font-size:2rem;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-eyebrow">FAMILY TRIP · JEJU ISLAND</div>
+  <h1 class="font-display">濟州島親子環島行程<br><span class="accent">2026 年 11 月 25 日–29 日</span></h1>
+  <p class="sub">2 大 2 小（6 歲／120cm＋8 歲／130cm 男孩）· 自駕環島五天四夜 · 順暢不繞路版</p>
+  <div class="flight-pills">
+    <div class="pill">✈ 去程 <b>IT632</b>　RMQ 07:00 → CJU 10:15（11/25）</div>
+    <div class="pill">✈ 回程 <b>IT633</b>　CJU 20:20 → RMQ 21:35（11/29）</div>
+    <div class="pill">🚗 取車 <b>11/25（三）11:00</b>　Jeju Auto House</div>
+    <div class="pill">🚗 還車 <b>11/29（日）09:30</b>　Jeju Auto House（5天）</div>
+  </div>
+</header>
+
+<div class="muststrip">
+  <div class="must-label">★ 五大必去亮點</div>
+  <div class="must-grid">
+    <span class="must-chip">9.81 Park 賽車</span>
+    <span class="must-chip">HARIBO Happy World</span>
+    <span class="must-chip">산굼부리 山君不離</span>
+    <span class="must-chip">Arte Kids Park</span>
+    <span class="must-chip">Noraba 海景海鮮拉麵</span>
+    <span class="must-chip">삼촌네돌판구이 石板烤肉</span>
+    <span class="must-chip">Aqua Planet 水族館</span>
+    <span class="must-chip">88돼지 炭火黑豬肉</span>
+    <span class="must-chip">Sorang 照相館</span>
+    <span class="must-chip">Audrant Bakery</span>
+  </div>
+</div>
+
+<!-- ===== DAY QUICK NAV ===== -->
+<nav class="day-nav" aria-label="每日行程快速跳轉">
+  <div class="day-nav-inner">
+    <span class="day-nav-label">快速跳轉</span>
+    <a class="day-nav-btn west" href="#day1">
+      <span class="day-nav-num">Day 1</span>
+      <span class="day-nav-sub">11/25 三｜抵達・西部</span>
+    </a>
+    <a class="day-nav-btn west" href="#day2">
+      <span class="day-nav-num">Day 2</span>
+      <span class="day-nav-sub">11/26 四｜9.81・Noraba・Arte Kids・삼촌네돌판구이</span>
+    </a>
+    <a class="day-nav-btn south" href="#day3">
+      <span class="day-nav-num">Day 3</span>
+      <span class="day-nav-sub">11/27 五｜Aqua Planet・山君不離・偶來市場</span>
+    </a>
+    <a class="day-nav-btn city" href="#day4">
+      <span class="day-nav-num">Day 4</span>
+      <span class="day-nav-sub">11/28 六｜Sorang・Emart・亂打秀</span>
+    </a>
+    <a class="day-nav-btn city" href="#day5">
+      <span class="day-nav-num">Day 5</span>
+      <span class="day-nav-sub">11/29 日｜函德・還車寄行李・市區・Kakao Taxi 返台</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ================= DAY 1 ================= -->
+<section class="day-block wrap theme-west" id="day1">
+  <div class="day-flag">
+    <span class="day-num font-display">01</span>
+    <span class="day-date">11/25（三）</span>
+  </div>
+  <h3 class="day-region">抵達取車 → UNIQLO → HARIBO ★ → 翰林午餐 → 動物農場 → 協才海灘 → 大創・翰林市場 → 뽈살집晚餐</h3>
+  <div class="timeline">
+    <div class="timeline-bar"></div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">10:15</div>
+      <div class="tl-card">
+        <div class="tl-name">抵達 CJU 機場 → 樂天租車取車</div>
+        <div class="tl-desc">出 5 號門跨過馬路搭乘接駁巴士至 Jeju Auto House，建議預留 45–60 分鐘辦理手續與安裝兒童安全座椅。</div>
+        <div class="tl-meta"><span class="tag note">2 位兒童皆建議使用符合身高體重的安全座椅／增高墊</span></div>
+        <div class="tl-tel">📞 <a href="tel:+8264751800">+82 64-751-8000</a></div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">11:15–12:00</div>
+      <div class="tl-card">
+        <div class="tl-name">🛍️ UNIQLO 제주 도남점 濟州道南店</div>
+        <div class="tl-desc">機場開車約 12 分鐘，11:00 開門剛好銜接取車時間。採購必備保暖衣物後即出發前往 HARIBO，不需久留。</div>
+        <div class="tl-meta"><span class="tag note">11:00–20:30</span><span class="tag note">預留約 30–40 分鐘</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647471205">+82 64-747-1205</a>　地址：제주시 도남동</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot must"></div>
+      <div class="tl-time">12:00–13:30</div>
+      <div class="tl-card must-card">
+        <div class="tl-name">🐻 하리보 해피월드 인 제주 HARIBO Happy World</div>
+        <div class="tl-desc">韓國首間 HARIBO 官方超大型展館，從機場開車僅 15 分鐘。建議停留 1–1.5 小時。</div>
+        <div class="tl-meta"><span class="tag note">10:00–19:00</span><span class="tag note">免費停車</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82708850885">070-8850-8850</a>　地址：제주시 아연로 444-1</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">14:00–15:00</div>
+      <div class="tl-card">
+        <div class="tl-name">午餐｜돈까스 서황 Seohwang 炸豬排</div>
+        <div class="tl-desc">從 HARIBO 往西南開約 30 分鐘，順路前往動物農場的完美中繼站。李孝利強推的涯月排隊名店，招牌「綜合海鮮豬排」與「黑豬肉排」外酥內嫩，小孩絕對愛吃！</div>
+        <div class="tl-meta"><span class="tag spicy-free">完全不辣</span><span class="tag warn">食材售完提早打烊</span></div>
+        <div class="tl-tel">📞 064-799-8952　地址：제주시 애월읍 장소로 205-2</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">15:15–16:30</div>
+      <div class="tl-card">
+        <div class="tl-name">새별프렌즈 Saebyeol Friends 新星朋友動物農場</div>
+        <div class="tl-desc">吃飽後開車只要 5 分鐘！餵食羊、兔、鹿、迷你豬等多種動物，環境乾淨無異味。</div>
+        <div class="tl-meta"><span class="tag note">親子友善</span><span class="tag warn">17:30 前入場</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647942828">+82 64-794-2828</a></div>
+        <div class="warn-box">🌧️ <b>雨天/避寒神級備案：MoMo Zoo (모모쥬)</b><br>如果當天風太大或下雨，可改去車程 15 分鐘的「神話世界 MoMo Zoo」。這是 2025 年新開幕的超大室內動物園，有水豚、狐獴等，全程室內暖氣，小孩玩瘋！📞 0507-1358-1549</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">16:30–17:15</div>
+      <div class="tl-card">
+        <div class="tl-name">協才海水浴場 협재해수욕장</div>
+        <div class="tl-desc">動物農場後開車約 20 分鐘。傍晚夕陽光線絕美，遠眺飛揚島，孩子踩沙灘、追浪，約 45 分鐘輕鬆收尾。11 月底海風強，帶防風外套備用。</div>
+        <div class="tl-meta"><span class="tag note">免費</span><span class="tag warn">冬季海風強，備防風外套</span></div>
+        <div class="tl-tel">📞 海灘無服務電話　Naver Map 搜尋「협재해수욕장」</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">17:15–18:00</div>
+      <div class="tl-card">
+        <div class="tl-name">Daiso 大創（翰林店）& 한림매일시장 翰林每日市場</div>
+        <div class="tl-desc">協才後開車 5 분，翰林每日市場採買濟州橘子、零食、海苔；大創買文具玩具讓孩子自選旅途小物。注意：翰林另有「五日市場」只在逢 4、9 日開，11/25 當天沒有，要去的是每日營業的這間。</div>
+        <div class="tl-meta"><span class="tag note">市場 08:00–20:00（各店不同）</span><span class="tag note">可停車</span><span class="tag warn">Daiso 電話未查到，出發前確認營業</span></div>
+        <div class="tl-tel">📞 市場 <a href="tel:+82647965209">+82 64-796-5209</a>　地址：제주시 한림읍 한림로 687　Daiso：Naver Map 搜尋「다이소 한림점」</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">18:00</div>
+      <div class="tl-card">
+        <div class="tl-name">晚餐｜뽈살집 한림점 Ppolsaljip Hallim 特殊豬肉部位</div>
+        <div class="tl-desc">主推천겹살（千層肉）、비단살（絲綢肉），直送屠宰場鮮肉。孩子點근고기搭白飯，烤肉不辣。</div>
+        <div class="tl-meta"><span class="tag note">16:00–22:30（週四公休）</span><span class="tag spicy-free">烤肉不辣</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647965860">+82 64-796-5860</a>　地址：한림읍 한림상로 194</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">20:00</div>
+      <div class="tl-card">
+        <div class="tl-name">入住 제미바릅트 펜션 Jemibareupt Pension</div>
+        <div class="tl-desc">位於漢京面杜毛里（翰林西部），距協才海水浴場約 10 分鐘車程。西部民宿區，環境清靜。</div>
+        <div class="tl-meta"><span class="tag warn">櫃檯 15:00–21:00，21:00 後抵達須先聯絡</span><span class="tag note">免費停車</span></div>
+        <div class="tl-tel">📞 電話未公開，請用訂房確認信上的聯絡電話　地址：제주시 한경면 두모7길 33-1（Naver Map 搜尋「제미바릇 펜션」）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAY 2 ================= -->
+<section class="day-block wrap theme-west" id="day2">
+  <div class="day-flag">
+    <span class="day-num font-display">02</span>
+    <span class="day-date">11/26（四）</span>
+  </div>
+  <h3 class="day-region">9.81 Park ★ → Noraba 海景拉麵 → Arte Kids Park ★ → 涯月咖啡街 → 삼촌네돌판구이 → 西歸浦</h3>
+  <div class="timeline">
+    <div class="timeline-bar"></div>
+
+    <div class="tl-item">
+      <div class="tl-dot must"></div>
+      <div class="tl-time">09:00–12:30</div>
+      <div class="tl-card must-card">
+        <div class="tl-name">★ 9.81 Park 賽車主題樂園 開園第一波</div>
+        <div class="tl-desc">建議購「2인 패키지（2人套票）」：2人乘賽車 2 回＋ARENA 雷射槍戰＋SPORT LAB 互動遊戲＋RINGGGO 碰碰車，2 大 2 小各買一組。也可選「얼리버드 조기할인（早鳥折扣）」，含 1 小時無限次賽車，透過 Trip.com 親子早鳥約 42,500 韓元，相當划算。09:00 開園第一波人最少，賽道不用等，體驗最佳！</div>
+        <div class="tl-meta">
+          <span class="tag warn">⚠ 2人乘：駕駛滿 14 歲↑、150–190cm；同乘：身高 100cm↑</span>
+          <span class="tag note">09:00–18:00</span>
+          <span class="tag warn">務必提前下載 9.81 App 完成帳號綁定</span>
+        </div>
+        <div class="warn-box">
+          💡 <strong>票種選擇：</strong><br>
+          ・ 早鳥票（얼리버드）：最划算，含 1 小時無限賽車，Trip.com / KKday 購買<br>
+          ・ 2人套票（2인 패키지）：含賽車 2 回＋室內遊戲，適合 2 大 2 小各買一組<br>
+          ・ 2026年 2 月後票價已微調，以官網為準 → 981park.com/ticket<br>
+          ・ 穿運動鞋（必須），長褲建議；拖鞋、涼鞋無法搭乘
+        </div>
+        <div class="tl-tel">📞 <a href="tel:+8218339810">+82 1833-9810</a>　地址：제주시 애월읍 평화로 1529　訂票：981park.com / KKday / Trip.com</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">12:30–13:30</div>
+      <div class="tl-card">
+        <div class="tl-name">午餐｜9.81 Park 園內 Broccollege 輕食</div>
+        <div class="tl-desc">賽車結束後直接在園內解決午餐，漢堡、輕食選項多，不辣孩子適合，省去移動時間，留體力給下午 Arte Kids Park。</div>
+        <div class="tl-meta"><span class="tag spicy-free">不辣輕食</span><span class="tag note">園內無需移車</span></div>
+        <div class="tl-tel">📞 <a href="tel:+8218339810">+82 1833-9810</a>（9.81 Park 園區電話）　地址：제주시 애월읍 평화로 1529</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot must"></div>
+      <div class="tl-time">14:00–16:30</div>
+      <div class="tl-card must-card">
+        <div class="tl-name">★ 아르떼 키즈파크 Arte Kids Park 兒童媒體藝術樂園</div>
+        <div class="tl-desc">9.81 Park 開車約 10 분，濟州最大規模兒童體驗型媒體藝術樂園（約 1,200 坪），孩子奔跑互動區與沉浸燈光投影展示區，2F 附設 Café 可休息。購 2.5 小時票充分體驗。⚠️ 超時每 10 分鐘追加 2,000 韓元。</div>
+        <div class="tl-meta">
+          <span class="tag note">10:00–19:00（最後入場 18:00）</span>
+          <span class="tag note">免費停車</span>
+          <span class="tag warn">建議 Klook 提前訂票較便宜</span>
+        </div>
+        <div class="tl-tel">📞 <a href="tel:+82647997007">+82 64-799-7007</a>　地址：제주시 애월읍 월각로 929</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">16:30–17:15</div>
+      <div class="tl-card">
+        <div class="tl-name">애월 카페거리 涯月咖啡街 散步 + Noraba 點心</div>
+        <div class="tl-desc">Arte Kids Park 步行可達海岸線，散步約 15 분後前往구엄포구。<strong>노라바 Noraba（15:00 開）</strong>海景海鮮拉麵，文魚拉麵 15,000 韓元，可選不辣（순한맛），作為傍晚點心墊胃，保留正餐胃口給晚餐。旁邊구엄 石鹽田可拍照。</div>
+        <div class="tl-meta">
+          <span class="tag note">Noraba 15:00–17:30（LO 17:00）</span>
+          <span class="tag spicy-free">可選不辣</span>
+          <span class="tag warn">食材賣完提早打烊，16:30 前抵達</span>
+        </div>
+        <div class="tl-tel">📞 <a href="tel:+82647721900">+82 64-772-1900</a>　Noraba 地址：제주시 애월읍 구엄길 100</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">17:30–19:30</div>
+      <div class="tl-card">
+        <div class="tl-name">晚餐｜삼촌네돌판구이 叔叔家石板烤肉（西歸浦）</div>
+        <div class="tl-desc">涯月南下約 50 분抵達西歸浦市區，水晶飯店步行 8 분可達。돌판구이石板烤肉油脂均勻、肉質鮮嫩，完全不辣，孩子搭白飯安心享用。吃完步行返回水晶飯店。</div>
+        <div class="tl-meta">
+          <span class="tag spicy-free">石板烤肉不辣</span>
+          <span class="tag note">水晶飯店步行 8 분</span>
+        </div>
+        <div class="tl-tel">📞 電話未查到　地址：서귀포시 서문로29번길 25　Naver Map 搜尋「삼촌네돌판구이」</div>
+        <div class="warn-box">⚠ 這間的營業時間與公休日我沒能查到可靠資料，出發前請先在 Naver Map 確認 11/26（四）有營業；若沒開，附近的西歸浦黑豬肉店可替代。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">20:00</div>
+      <div class="tl-card">
+        <div class="tl-name">移動 + 入住 Cheonjiyeon Crystal Hotel 天地淵水晶飯店 ✅</div>
+        <div class="tl-desc">晚餐後步行 8 分鐘返回西歸浦市區飯店 Check-in。距每日偶來市場步行 5 分鐘，步行可達天地淵瀑布，地板暖氣、陽台景觀。Day2–3 連住兩晚，無需搬行李。</div>
+        <div class="tl-meta"><span class="tag note">住 Day2–3 連住</span><span class="tag note" style="background:#E6F4EA;color:#1A7A3A;">✅ Booking.com 已預定付款（11/26–11/28，2晚）</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647321811">+82 64-732-1811</a>（第三方訂房網資料，入住前請以 Booking.com 確認信電話為準）　地址：서귀포시 천지연로 39　Naver Map 搜尋「천지연크리스탈호텔」</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAY 3 ================= -->
+<section class="day-block wrap theme-south" id="day3">
+  <div class="day-flag">
+    <span class="day-num font-display">03</span>
+    <span class="day-date">11/27（五）</span>
+  </div>
+  <h3 class="day-region">소원김밥 早餐 → Aqua Planet ★ → 豬肉湯麵午餐 → 山君不離 → 西歸浦偶來市場</h3>
+  <div class="timeline">
+    <div class="timeline-bar"></div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">07:00–07:30</div>
+      <div class="tl-card">
+        <div class="tl-name">早餐｜소원김밥 心願紫菜飯捲</div>
+        <div class="tl-desc">水晶飯店步行 5 分鐘，07:00 開門即可取餐。手工紫菜飯捲，食材新鮮、口味清淡不辣，孩子最適合。</div>
+        <div class="tl-meta"><span class="tag spicy-free">不辣</span><span class="tag note">07:00–17:00（週日公休，11/27 五正常）</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647328585">+82 64-732-8585</a>　地址：서귀포시 칠십리로 137 1층</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot must"></div>
+      <div class="tl-time">09:30–12:30</div>
+      <div class="tl-card must-card">
+        <div class="tl-name">★ 아쿠아플라넷 Aqua Planet 濟州水族館</div>
+        <div class="tl-desc">韓國最大水族館，全室內冬天暖和。必看：海豚表演（建議 11:00 場次）。</div>
+        <div class="tl-tel">📞 <a href="tel:+8218337001">+82 1833-7001</a>  地址：서귀포시 성산읍 섭지코지로 95</div>
+      </div>
+    </div>
+    
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">12:45–13:45</div>
+      <div class="tl-card">
+        <div class="tl-name">午餐｜가시아방국수 Gasiabang 豬肉湯麵</div>
+        <div class="tl-desc">水族館出來開車不到 10 分鐘。濟州東部最紅的肉麵名店！豬大骨熬製的「고기국수(豬肉湯麵)」湯頭濃郁不辣，配上入口即化的「돔베고기(白切豬肉)」，小孩超級愛吃。</div>
+        <div class="tl-meta"><span class="tag spicy-free">豬肉湯麵不辣</span><span class="tag warn">用餐時段可能需候位</span></div>
+        <div class="tl-tel">📞 0507-1307-3069　地址：서귀포시 성산읍 섭지코지로 10</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">14:15–15:30</div>
+      <div class="tl-card">
+        <div class="tl-name">산굼부리 山君不離 天然火山口</div>
+        <div class="tl-desc">午餐後開車約 30 분。天然紀念物第 263 號火山口，步道平緩親子輕鬆完成，11 月底枯草芒草景觀優美，登頂可眺望城山日出峰與漢拏山。比 Eco Land 更接近城山方向，節省 30 분以上移動時間，讓下午西歸浦行程更從容。建議停留 1–1.5 小時。</div>
+        <div class="tl-meta"><span class="tag note">11–2 月 09:00–17:40（最後入場 17:00）</span><span class="tag note">兒童票 3,000 韓元</span><span class="tag note">免費停車</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647837870">+82 64-783-7870</a>　地址：제주시 조천읍 비자림로 768</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">15:30–16:30</div>
+      <div class="tl-card">
+        <div class="tl-name">移動｜山君不離 → 西歸浦 (車程約 50 分鐘)</div>
+        <div class="tl-desc">車程是我估的，沒有查證。孩子可以在車上休息。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">16:30–18:00</div>
+      <div class="tl-card">
+        <div class="tl-name">回水晶飯店休息（自由時間）</div>
+        <div class="tl-desc">這段是空檔：讓孩子休息、洗澡、整理戰利品，晚上再去市場。想多排景點可以填在這裡，我沒有硬塞。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot must"></div>
+      <div class="tl-time">18:00–19:30</div>
+      <div class="tl-card must-card">
+        <div class="tl-name">晚餐｜서귀포 매일올레시장 西歸浦每日偶來市場</div>
+        <div class="tl-desc">回到飯店旁步行 5 分鐘。晚餐直接在市場解決，採買伴手禮：濟州橘子、糖餅、魚餅、紫菜飯捲、烤肉串，小孩邊逛邊吃小吃墊胃，完美結束這回合！</div>
+        <div class="tl-meta"><span class="tag spicy-free">小吃可自選不辣</span><span class="tag note">07:00–21:00</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647621949">+82 64-762-1949</a></div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">19:30</div>
+      <div class="tl-card">
+        <div class="tl-name">返回 Cheonjiyeon Crystal Hotel 天地淵水晶飯店（連住第二晚）</div>
+        <div class="tl-desc">逛完市場回飯店休息，明天要早起退房前往松堂。</div>
+        <div class="tl-tel">📞 <a href="tel:+82647321811">+82 64-732-1811</a>（第三方訂房網資料，請以 Booking.com 確認信電話為準）　地址：서귀포시 천지연로 39</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAY 4 ================= -->
+<section class="day-block wrap theme-city" id="day4">
+  <div class="day-flag">
+    <span class="day-num font-display">04</span>
+    <span class="day-date">11/28（六）</span>
+  </div>
+  <h3 class="day-region">Sorang ★ 10:00 → Welcome Kitchen → Emart → 亂打秀 16:30 → 晚餐</h3>
+  <div class="timeline">
+    <div class="timeline-bar"></div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">07:30–08:30</div>
+      <div class="tl-card">
+        <div class="tl-name">退房 & 簡單早餐</div>
+        <div class="tl-desc">西歸浦退房，帶著行李出發。可買便利商店餐點或紫菜飯捲在路上吃。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">08:30–09:45</div>
+      <div class="tl-card">
+        <div class="tl-name">移動｜西歸浦 → 구좌읍 松堂里 (車程約 1 小時)</div>
+        <div class="tl-desc">預留約 15 分鐘緩衝，10:00 準時抵達 Sorang。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot must"></div>
+      <div class="tl-time">10:00–11:00</div>
+      <div class="tl-card must-card">
+        <div class="tl-name">★ Sorang 照相館 소랑사진관（第一站）</div>
+        <div class="tl-desc">10:00 開門第一組，人少、光線好。家庭合照約 45 分鐘，準備顏色協調的服裝；石牆老屋濟州風格，攝影師基本英文溝通，提供實體沖印與電子檔。</div>
+        <div class="tl-meta"><span class="tag note">10:00–18:00</span><span class="tag warn">週三公休（11/28 六正常）</span><span class="tag warn">務必預約 10:00 場次</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647827951">+82 64-782-7951</a> 地址：제주시 구좌읍 중산간동로 2253</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">11:15–12:30</div>
+      <div class="tl-card">
+        <div class="tl-name">午餐｜Welcome Kitchen 松堂村義式餐廳</div>
+        <div class="tl-desc">與 Sorang 門牌相鄰（2250 / 2253），步行即達。奶油培根義大利麵、漢堡排等洋食全不辣。</div>
+        <div class="tl-tel">📞 <a href="tel:+821035784631">+82 10-3578-4631</a> 地址：제주시 구좌읍 중산간동로 2250</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">12:30–13:15</div>
+      <div class="tl-card">
+        <div class="tl-name">移動｜松堂 → 이마트 신제주점 (新濟州 Emart)</div>
+        <div class="tl-desc">往濟州市區前進，車程約 45 分鐘。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">13:15–15:30</div>
+      <div class="tl-card">
+        <div class="tl-name">🛒 이마트 신제주점 新濟州 Emart 超市採購</div>
+        <div class="tl-desc">約 2 小時悠閒採購濟州限定零食、泡麵、海苔伴手禮，可退稅，也可讓孩子自選零食；逛不完或逛完得早，都可以提早出發去看秀。採購的東西先放車上。</div>
+        <div class="tl-tel">📞 <a href="tel:+82647290234">+82 64-729-0234</a>　地址：제주시 노형동</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">15:30–16:10</div>
+      <div class="tl-card">
+        <div class="tl-name">移動｜Emart → 濟州亂打秀劇場</div>
+        <div class="tl-desc">開車前往 선돌목동길，車程我估約 15–20 分鐘（未查證），含停車與換票，請在 16:10 前抵達。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot must"></div>
+      <div class="tl-time">16:30–18:00</div>
+      <div class="tl-card must-card">
+        <div class="tl-name">🎭 濟州亂打秀 NANTA Show</div>
+        <div class="tl-desc">韓國經典無言喜劇，結合廚房打擊樂與雜技，非常適合 6、8 歲孩子觀賞！請於 16:20 前完成換票入座。公演時間約 90 分鐘（16:30–18:00）。</div>
+        <div class="tl-meta"><span class="tag warn">16:20 前入座完成</span><span class="tag note">票價：A席 50,000 / 兒童 30,000 韓元</span><span class="tag warn">nanta.co.kr 提前訂票，11/28 場次以官網確認</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647238878">+82 64-723-8878</a>　導航搜尋「제주난타전용관」　地址：제주시 선돌목동길 56-26　訂票：nanta.co.kr</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">18:30–19:45</div>
+      <div class="tl-card">
+        <div class="tl-name">晚餐｜88돼지 88烤肉 炭火黑豬肉（연동）</div>
+        <div class="tl-desc">亂打秀結束後開車前往 연동（신제주一帶）。炭火烤黑豬五花（오겹살），評論形容油脂入口即化；孩子吃烤肉搭白飯即可，其他配菜請先確認辣度。這間營業到凌晨，時間不是問題。Hotel Leo 也在新濟州這一帶，晚餐後回飯店應該順路，但兩者距離我沒查證。</div>
+        <div class="tl-meta">
+          <span class="tag note">16:00–05:00（週二至週日）</span>
+          <span class="tag warn">營業時間是舊資料，需再確認</span>
+          <span class="tag warn">停車與兒童椅資料沒查到</span>
+        </div>
+        <div class="tl-tel">📞 <a href="tel:+82647119947">+82 64-711-9947</a>　地址：제주시 연동 261-10　Naver Map 搜尋「88돼지」</div>
+        <div class="warn-box">⚠ 營業時間出自 2017 年的評論網站，這幾年可能變動；週一沒列營業時間，11/28 是週六應該有開。店裡不通英文，出發前請在 Naver Map 確認營業，並打電話問有沒有停車位、兒童椅。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">20:15</div>
+      <div class="tl-card">
+        <div class="tl-name">入住 Hotel Leo 利奧酒店</div>
+        <div class="tl-desc">近機場、免費停車、地板暖氣。</div>
+        <div class="tl-tel">📞 +82 64-754-7000 地址：제주시 삼무로 14</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAY 5 ================= -->
+<section class="day-block wrap theme-city" id="day5">
+  <div class="day-flag">
+    <span class="day-num font-display">05</span>
+    <span class="day-date">11/29（日）</span>
+  </div>
+  <h3 class="day-region">Audrant Bakery → 函德海灘 → 還車 → 行李寄存 → 市區逛街 → Dotoree Kitchen → Kakao Taxi 回機場 → 返台</h3>
+  <div class="timeline">
+    <div class="timeline-bar"></div>
+
+    <div class="tl-item">
+      <div class="tl-dot must"></div>
+      <div class="tl-time">07:00–08:30</div>
+      <div class="tl-card must-card">
+        <div class="tl-name">★ Audrant Bakery 大蒜法棍 + 函德海灘晨間散步</div>
+        <div class="tl-desc">招牌「마농바게트（大蒜法棍）」是濟州傳奇，07:00 開門即取餐，買完麵包直接走到對面函德海水浴場，早晨海景極美，孩子在沙灘最後玩耍，約留 1 小時。</div>
+        <div class="tl-meta"><span class="tag note">07:00–22:00</span><span class="tag warn">大蒜法棍早售罄，07:00 即取</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647845404">+82 64-784-5404</a>　地址：제주시 조천읍 함덕14길　IG：@audrant_hd</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">08:30–09:30</div>
+      <div class="tl-card">
+        <div class="tl-name">退房 Hotel Leo → 加滿油 → 開車還車</div>
+        <div class="tl-desc">Hotel Leo 退房後，先在機場附近加滿油（樂天租車對面即有加油站），再開車至 Jeju Auto House 還車。留意車內是否有遺留物、確認無刮傷，還車手續約 10–15 분。</div>
+        <div class="tl-meta"><span class="tag warn">還車前先加滿油，自加比租車公司代加便宜</span></div>
+        <div class="tl-tel">📞 <a href="tel:+8264751800">+82 64-751-8000</a>　地址：제주시 용문로 62（Jeju Auto House）</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">10:00–10:30</div>
+      <div class="tl-card">
+        <div class="tl-name">🧳 CJU 機場 B1F 行李寄存</div>
+        <div class="tl-desc">搭還車接駁車至機場後，直接前往 B1F 行李寄存處（짐 보관소）寄放全部行李，輕裝出發逛市區。費用約 3,000–5,000 韓元 / 件，06:00–21:00 開放。</div>
+        <div class="tl-meta"><span class="tag note">B1F 짐 보관소</span><span class="tag note">約 3,000–5,000 韓元 / 件</span><span class="tag note">06:00–21:00</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">10:30–12:00</div>
+      <div class="tl-card">
+        <div class="tl-name">🛍️ 濟州中央地下商街 & 七星路商圈</div>
+        <div class="tl-desc">機場搭計程車約 10 분，室內地下街不受天氣影響，童裝、服飾、Olive Young 韓國美妝、雜貨非常齊全。地上七星路步行街有眾多運動品牌，最後掃貨衝刺！</div>
+        <div class="tl-tel">📞 商街無統一電話　地址：제주시 중앙로 60　Naver Map 搜尋「제주중앙지하상가」</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">12:00–13:00</div>
+      <div class="tl-card">
+        <div class="tl-name">午餐｜도토리키친 Dotoree Kitchen 청귤소바 青橘蕎麥麵</div>
+        <div class="tl-desc">七星路步行約 5 분。招牌「청귤소바」以濟州青橘入湯底，清爽酸甜完全不辣，是旅程最後一餐的完美收尾。食材售完提早打烊，建議 12:00 前抵達。</div>
+        <div class="tl-meta"><span class="tag spicy-free">完全不辣</span><span class="tag warn">食材賣完提早打烊</span><span class="tag note">11:00–17:00</span></div>
+        <div class="tl-meta"><span class="tag warn">不可預約，現場候位</span><span class="tag note">有免費公營停車場（建築後方與左側）</span></div>
+        <div class="tl-tel">📞 <a href="tel:+8250714631021">0507-1463-1021</a>（另有資料標示 064-782-1021）　地址：제주시 북성로 59 1층</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">13:00–15:30</div>
+      <div class="tl-card">
+        <div class="tl-name">市區最後彈性採買 & 咖啡休息</div>
+        <div class="tl-desc">在市區喝杯咖啡，確認行李與戰利品是否都已整理完畢，整理一下心情準備返台。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">15:30–16:00</div>
+      <div class="tl-card">
+        <div class="tl-name">🚖 Kakao Taxi 叫車回機場取行李</div>
+        <div class="tl-desc">提前 15–20 분在 Kakao Taxi App 叫車，設定目的地為「濟州國際機場 出發層（제주국제공항 출발층）」。市區至機場約 10–15 분，費用約 7,000–10,000 韓元。抵達後先至 B1F 取回行李，再辦理登機。</div>
+        <div class="tl-meta">
+          <span class="tag note">Kakao Taxi 優先（韓國最普及）</span>
+          <span class="tag note">Uber 備案，覆蓋率略低</span>
+          <span class="tag warn">建議比航班起飛提早 4 小時抵達機場</span>
+        </div>
+        <div class="warn-box">📱 <strong>Kakao Taxi 使用說明：</strong><br>
+        ・ 下載「카카오T」App，可用台灣手機號碼註冊<br>
+        ・ 選「일반택시（普通）」即可，無需選商務車<br>
+        ・ 信用卡直接在 App 綁定付款，免備現金</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">16:30</div>
+      <div class="tl-card">
+        <div class="tl-name">CJU 機場辦理登機 → 出境</div>
+        <div class="tl-desc">B1F 取行李 → 辦理報到托運 → 出境安檢 → 候機。機場免稅店可最後逛逛。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">20:20</div>
+      <div class="tl-card">
+        <div class="tl-name">✈ IT633 起飛 → 21:35 抵達 RMQ 台中國際機場</div>
+        <div class="tl-desc">平安返抵台灣！</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
