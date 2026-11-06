@@ -269,6 +269,38 @@ footer{
   border-top:1px solid var(--line);
 }
 
+
+/* ===== PAY SECTION ===== */
+.day-nav-btn.pay{background:#FFF8E1;border-color:#e8d28a;}
+.day-nav-btn.pay:hover{background:#fff1c2;}
+.day-nav-btn.pay .day-nav-num{color:#8a6a10;}
+.pay-section{padding:3rem 0 4rem;scroll-margin-top:70px;}
+.pay-head{text-align:center;margin-bottom:1.6rem;}
+.pay-head h2{font-family:'Noto Serif TC',serif;font-size:1.7rem;font-weight:700;margin-bottom:.4rem;}
+.pay-head p{font-size:.88rem;color:#6b6052;max-width:680px;margin:0 auto;}
+.pay-plan{background:#FFF7E8;border-left:4px solid #E8A23C;border-radius:0 12px 12px 0;padding:1rem 1.2rem;margin-bottom:1.4rem;font-size:.9rem;}
+.pay-plan h4{font-size:1rem;margin-bottom:.4rem;color:#7A5417;}
+.pay-plan ul{margin:.2rem 0 0 1.1rem;}
+.pay-plan li{margin:.25rem 0;}
+.pay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1rem;margin-bottom:1.4rem;}
+.pay-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;box-shadow:var(--shadow);font-size:.86rem;}
+.pay-card h4{font-size:1.02rem;margin-bottom:.15rem;}
+.pay-card .pay-sub{font-size:.76rem;color:#8a8073;margin-bottom:.5rem;}
+.pay-card h5{font-size:.8rem;margin:.7rem 0 .2rem;color:var(--ocean);}
+.pay-card ul{margin:.2rem 0 .2rem 1.05rem;}
+.pay-card li{margin:.22rem 0;}
+.pay-card .pay-top{display:inline-block;background:var(--leaf-soft);color:#3F5536;font-weight:700;font-size:.74rem;padding:.15rem .6rem;border-radius:20px;margin-bottom:.35rem;}
+.pay-note{font-size:.78rem;color:#7A5417;background:#FFF7E8;border-radius:8px;padding:.45rem .7rem;margin-top:.6rem;}
+.pay-table-wrap{overflow-x:auto;margin-bottom:1.2rem;border:1px solid var(--line);border-radius:12px;background:#fff;}
+.pay-table{border-collapse:collapse;width:100%;min-width:640px;font-size:.82rem;}
+.pay-table th{background:var(--ocean);color:#fff;text-align:left;padding:.55rem .7rem;font-weight:600;}
+.pay-table td{padding:.55rem .7rem;border-top:1px solid var(--line);vertical-align:top;}
+.pay-check{background:var(--paper-soft);border-radius:12px;padding:1rem 1.2rem;font-size:.86rem;margin-bottom:1rem;}
+.pay-check h4{font-size:.95rem;margin-bottom:.4rem;}
+.pay-check ul{list-style:none;margin:0;padding:0;}
+.pay-check li{margin:.28rem 0;}
+.pay-src{font-size:.74rem;color:#8a8073;line-height:1.6;}
+
 /* ===== DAY QUICK NAV ===== */
 .day-nav{
   position:sticky;top:0;z-index:100;
@@ -352,7 +384,8 @@ footer{
     <span class="must-chip">삼촌네돌판구이 石板烤肉</span>
     <span class="must-chip">Aqua Planet 水族館</span>
     <span class="must-chip">88돼지 炭火黑豬肉</span>
-    <span class="must-chip">Sorang 照相館</span>
+    <span class="must-chip">Eco Land 森林小火車</span>
+    <span class="must-chip">휴애리 橘子採摘</span>
     <span class="must-chip">Audrant Bakery</span>
   </div>
 </div>
@@ -371,15 +404,19 @@ footer{
     </a>
     <a class="day-nav-btn south" href="#day3">
       <span class="day-nav-num">Day 3</span>
-      <span class="day-nav-sub">11/27 五｜Aqua Planet・山君不離・偶來市場</span>
+      <span class="day-nav-sub">11/27 五｜Aqua Planet・휴애리・偶來市場</span>
     </a>
     <a class="day-nav-btn city" href="#day4">
       <span class="day-nav-num">Day 4</span>
-      <span class="day-nav-sub">11/28 六｜Sorang・Emart・亂打秀</span>
+      <span class="day-nav-sub">11/28 六｜Eco Land・山君不離・Emart</span>
     </a>
     <a class="day-nav-btn city" href="#day5">
       <span class="day-nav-num">Day 5</span>
       <span class="day-nav-sub">11/29 日｜函德・還車寄行李・市區・Kakao Taxi 返台</span>
+    </a>
+    <a class="day-nav-btn pay" href="#pay">
+      <span class="day-nav-num">💳 支付</span>
+      <span class="day-nav-sub">LINE Pay・DAWAY・星展 eco・富邦 J</span>
     </a>
   </div>
 </nav>
@@ -390,7 +427,7 @@ footer{
     <span class="day-num font-display">01</span>
     <span class="day-date">11/25（三）</span>
   </div>
-  <h3 class="day-region">抵達取車 → UNIQLO → HARIBO ★ → 翰林午餐 → 動物農場 → 協才海灘 → 大創・翰林市場 → 뽈살집晚餐</h3>
+  <h3 class="day-region">抵達取車 → UNIQLO → HARIBO ★ → 翰林午餐 → 動物農場 → 大創・翰林市場 → 뽈살집晚餐</h3>
   <div class="timeline">
     <div class="timeline-bar"></div>
 
@@ -452,21 +489,10 @@ footer{
 
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-time">16:30–17:15</div>
-      <div class="tl-card">
-        <div class="tl-name">協才海水浴場 협재해수욕장</div>
-        <div class="tl-desc">動物農場後開車約 20 分鐘。傍晚夕陽光線絕美，遠眺飛揚島，孩子踩沙灘、追浪，約 45 分鐘輕鬆收尾。11 月底海風強，帶防風外套備用。</div>
-        <div class="tl-meta"><span class="tag note">免費</span><span class="tag warn">冬季海風強，備防風外套</span></div>
-        <div class="tl-tel">📞 海灘無服務電話　Naver Map 搜尋「협재해수욕장」</div>
-      </div>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-time">17:15–18:00</div>
+      <div class="tl-time">16:50–17:50</div>
       <div class="tl-card">
         <div class="tl-name">Daiso 大創（翰林店）& 한림매일시장 翰林每日市場</div>
-        <div class="tl-desc">協才後開車 5 분，翰林每日市場採買濟州橘子、零食、海苔；大創買文具玩具讓孩子自選旅途小物。注意：翰林另有「五日市場」只在逢 4、9 日開，11/25 當天沒有，要去的是每日營業的這間。</div>
+        <div class="tl-desc">動物農場結束後開車前往翰林（車程我沒查證），翰林每日市場採買濟州橘子、零食、海苔；大創買文具玩具讓孩子自選旅途小物。注意：翰林另有「五日市場」只在逢 4、9 日開，11/25 當天沒有，要去的是每日營業的這間。</div>
         <div class="tl-meta"><span class="tag note">市場 08:00–20:00（各店不同）</span><span class="tag note">可停車</span><span class="tag warn">Daiso 電話未查到，出發前確認營業</span></div>
         <div class="tl-tel">📞 市場 <a href="tel:+82647965209">+82 64-796-5209</a>　地址：제주시 한림읍 한림로 687　Daiso：Naver Map 搜尋「다이소 한림점」</div>
       </div>
@@ -488,7 +514,7 @@ footer{
       <div class="tl-time">20:00</div>
       <div class="tl-card">
         <div class="tl-name">入住 제미바릅트 펜션 Jemibareupt Pension</div>
-        <div class="tl-desc">位於漢京面杜毛里（翰林西部），距協才海水浴場約 10 分鐘車程。西部民宿區，環境清靜。</div>
+        <div class="tl-desc">位於漢京面杜毛里（翰林西部），西部民宿區，環境清靜。</div>
         <div class="tl-meta"><span class="tag warn">櫃檯 15:00–21:00，21:00 後抵達須先聯絡</span><span class="tag note">免費停車</span></div>
         <div class="tl-tel">📞 電話未公開，請用訂房確認信上的聯絡電話　地址：제주시 한경면 두모7길 33-1（Naver Map 搜尋「제미바릇 펜션」）</div>
       </div>
@@ -511,20 +537,20 @@ footer{
       <div class="tl-time">09:00–12:30</div>
       <div class="tl-card must-card">
         <div class="tl-name">★ 9.81 Park 賽車主題樂園 開園第一波</div>
-        <div class="tl-desc">建議購「2인 패키지（2人套票）」：2人乘賽車 2 回＋ARENA 雷射槍戰＋SPORT LAB 互動遊戲＋RINGGGO 碰碰車，2 大 2 小各買一組。也可選「얼리버드 조기할인（早鳥折扣）」，含 1 小時無限次賽車，透過 Trip.com 親子早鳥約 42,500 韓元，相當划算。09:00 開園第一波人最少，賽道不用等，體驗最佳！</div>
+        <div class="tl-desc">早鳥票已在 Klook 買好（成人＋兒童 2 套，剛好 2 大 2 小）。依我先前查到的資料，早鳥票含 1 小時無限次賽車與室內設施，實際內容以 Klook 憑證為準。09:00 開園第一波人最少，賽道不用排隊。</div>
         <div class="tl-meta">
           <span class="tag warn">⚠ 2人乘：駕駛滿 14 歲↑、150–190cm；同乘：身高 100cm↑</span>
+          <span class="tag note" style="background:#E6F4EA;color:#1A7A3A;">✅ 早鳥票已購（Klook，成人＋兒童 2 套）</span>
           <span class="tag note">09:00–18:00</span>
           <span class="tag warn">務必提前下載 9.81 App 完成帳號綁定</span>
         </div>
         <div class="warn-box">
-          💡 <strong>票種選擇：</strong><br>
-          ・ 早鳥票（얼리버드）：最划算，含 1 小時無限賽車，Trip.com / KKday 購買<br>
-          ・ 2人套票（2인 패키지）：含賽車 2 回＋室內遊戲，適合 2 大 2 小各買一組<br>
-          ・ 2026年 2 月後票價已微調，以官網為準 → 981park.com/ticket<br>
+          💡 <strong>入場前確認：</strong><br>
+          ・ 看一下 Klook 憑證上早鳥票的使用日期與入場時段，確認 11/26 可用、沒有時段限制<br>
+          ・ 到園後用 Klook 憑證在售票機兌換手環（先前查到的流程，以憑證說明為準），再用 App 綁定<br>
           ・ 穿運動鞋（必須），長褲建議；拖鞋、涼鞋無法搭乘
         </div>
-        <div class="tl-tel">📞 <a href="tel:+8218339810">+82 1833-9810</a>　地址：제주시 애월읍 평화로 1529　訂票：981park.com / KKday / Trip.com</div>
+        <div class="tl-tel">📞 <a href="tel:+8218339810">+82 1833-9810</a>　地址：제주시 애월읍 평화로 1529</div>
       </div>
     </div>
 
@@ -603,7 +629,7 @@ footer{
     <span class="day-num font-display">03</span>
     <span class="day-date">11/27（五）</span>
   </div>
-  <h3 class="day-region">소원김밥 早餐 → Aqua Planet ★ → 豬肉湯麵午餐 → 山君不離 → 西歸浦偶來市場</h3>
+  <h3 class="day-region">소원김밥 早餐 → Aqua Planet ★ → 豬肉湯麵午餐 → 휴애리 橘子採摘 → 西歸浦偶來市場</h3>
   <div class="timeline">
     <div class="timeline-bar"></div>
 
@@ -640,28 +666,35 @@ footer{
     </div>
 
     <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-time">14:15–15:30</div>
-      <div class="tl-card">
-        <div class="tl-name">산굼부리 山君不離 天然火山口</div>
-        <div class="tl-desc">午餐後開車約 30 분。天然紀念物第 263 號火山口，步道平緩親子輕鬆完成，11 月底枯草芒草景觀優美，登頂可眺望城山日出峰與漢拏山。比 Eco Land 更接近城山方向，節省 30 분以上移動時間，讓下午西歸浦行程更從容。建議停留 1–1.5 小時。</div>
-        <div class="tl-meta"><span class="tag note">11–2 月 09:00–17:40（最後入場 17:00）</span><span class="tag note">兒童票 3,000 韓元</span><span class="tag note">免費停車</span></div>
-        <div class="tl-tel">📞 <a href="tel:+82647837870">+82 64-783-7870</a>　地址：제주시 조천읍 비자림로 768</div>
+      <div class="tl-dot must"></div>
+      <div class="tl-time">14:30–16:30</div>
+      <div class="tl-card must-card">
+        <div class="tl-name">★ 휴애리 自然生活公園 Hueree（橘子採摘・餵動物・黑豬秀）</div>
+        <div class="tl-desc">午餐後開車前往南元邑，車程我估約 40 分鐘（未查證）。11 月是橘子採摘季，孩子可以自己摘橘子試吃；園內還能餵動物，另有黑豬秀。建議 14:30 抵達，趕上 15:00 的黑豬秀（開演前 30 分鐘入場），接著去採橘子。</div>
+        <div class="tl-meta">
+          <span class="tag note">冬季 09:00–18:00，最後入場 16:30</span>
+          <span class="tag warn">橘子體驗最後入場 16:00</span>
+          <span class="tag note">橘子體驗 ₩8,000／餵食草料 ₩2,000</span>
+          <span class="tag note">黑豬秀 11:00／13:00／15:00／17:00</span>
+          <span class="tag note">免費停車，全年無休</span>
+        </div>
+        <div class="warn-box">入場票價（觀光公社資料）：成人 ₩13,000／青少年 ₩11,000／兒童 ₩10,000，各平台折扣價不同，購買前請確認票種與兒童價。橘子採摘的季節會隨橘子生長調整，出發前打電話確認。</div>
+        <div class="tl-tel">📞 <a href="tel:+82647322114">+82 64-732-2114</a>　地址：서귀포시 남원읍 신례동로 256</div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-time">15:30–16:30</div>
+      <div class="tl-time">16:30–17:00</div>
       <div class="tl-card">
-        <div class="tl-name">移動｜山君不離 → 西歸浦 (車程約 50 分鐘)</div>
-        <div class="tl-desc">車程是我估的，沒有查證。孩子可以在車上休息。</div>
+        <div class="tl-name">移動｜휴애리 → 西歸浦</div>
+        <div class="tl-desc">車程我估約 30 分鐘，沒有查證。孩子可以在車上休息。</div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-time">16:30–18:00</div>
+      <div class="tl-time">17:00–18:00</div>
       <div class="tl-card">
         <div class="tl-name">回水晶飯店休息（自由時間）</div>
         <div class="tl-desc">這段是空檔：讓孩子休息、洗澡、整理戰利品，晚上再去市場。想多排景點可以填在這裡，我沒有硬塞。</div>
@@ -684,7 +717,7 @@ footer{
       <div class="tl-time">19:30</div>
       <div class="tl-card">
         <div class="tl-name">返回 Cheonjiyeon Crystal Hotel 天地淵水晶飯店（連住第二晚）</div>
-        <div class="tl-desc">逛完市場回飯店休息，明天要早起退房前往松堂。</div>
+        <div class="tl-desc">逛完市場回飯店休息，明天退房後前往松堂。</div>
         <div class="tl-tel">📞 <a href="tel:+82647321811">+82 64-732-1811</a>（第三方訂房網資料，請以 Booking.com 確認信電話為準）　地址：서귀포시 천지연로 39</div>
       </div>
     </div>
@@ -697,13 +730,13 @@ footer{
     <span class="day-num font-display">04</span>
     <span class="day-date">11/28（六）</span>
   </div>
-  <h3 class="day-region">Sorang ★ 10:00 → Welcome Kitchen → Emart → 亂打秀 16:30 → 晚餐</h3>
+  <h3 class="day-region">Eco Land ★ → 교래手工刀削麵午餐 → 山君不離 → Emart → 88돼지晚餐</h3>
   <div class="timeline">
     <div class="timeline-bar"></div>
 
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-time">07:30–08:30</div>
+      <div class="tl-time">08:00–09:00</div>
       <div class="tl-card">
         <div class="tl-name">退房 & 簡單早餐</div>
         <div class="tl-desc">西歸浦退房，帶著行李出發。可買便利商店餐點或紫菜飯捲在路上吃。</div>
@@ -712,79 +745,79 @@ footer{
 
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-time">08:30–09:45</div>
+      <div class="tl-time">09:00–10:00</div>
       <div class="tl-card">
-        <div class="tl-name">移動｜西歸浦 → 구좌읍 松堂里 (車程約 1 小時)</div>
-        <div class="tl-desc">預留約 15 分鐘緩衝，10:00 準時抵達 Sorang。</div>
+        <div class="tl-name">移動｜西歸浦 → 조천읍 교래（車程約 1 小時）</div>
+        <div class="tl-desc">車程是我估的，沒有查證。Eco Land 08:30 開門，10:00 抵達剛好避開開門時的人潮。</div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-dot must"></div>
-      <div class="tl-time">10:00–11:00</div>
+      <div class="tl-time">10:00–12:15</div>
       <div class="tl-card must-card">
-        <div class="tl-name">★ Sorang 照相館 소랑사진관（第一站）</div>
-        <div class="tl-desc">10:00 開門第一組，人少、光線好。家庭合照約 45 分鐘，準備顏色協調的服裝；石牆老屋濟州風格，攝影師基本英文溝通，提供實體沖印與電子檔。</div>
-        <div class="tl-meta"><span class="tag note">10:00–18:00</span><span class="tag warn">週三公休（11/28 六正常）</span><span class="tag warn">務必預約 10:00 場次</span></div>
-        <div class="tl-tel">📞 <a href="tel:+82647827951">+82 64-782-7951</a> 地址：제주시 구좌읍 중산간동로 2253</div>
+        <div class="tl-name">★ 에코랜드 Eco Land 森林小火車</div>
+        <div class="tl-desc">搭小火車穿過곶자왈（熔岩森林），全程 5 站（主站、Eco Bridge、Lake Side、Forest Park、Lavender Farm），每站風景不同，可以下車散步拍照。有 Kid’s Town 等孩子能玩的地方。資料建議停留 1.5–2 小時，冬天太陽下山早，所以排在上午。</div>
+        <div class="tl-meta">
+          <span class="tag note">營業 08:30–18:20（各網站寫的時間略有差異）</span>
+          <span class="tag note">11 月首班 08:40、末班 17:40（舊資料，請以現場為準）</span>
+          <span class="tag note">免費停車，可刷卡，全年無休</span>
+        </div>
+        <div class="warn-box">票價參考：成人 ₩21,000／青少年 ₩18,000／兒童 ₩15,000（來自 2026 年的整理文章）。Trazy 等平台有約 8% 折扣票，購買前請確認票種與兒童價。天空自行車、天鵝船等設施另外收費。</div>
+        <div class="tl-tel">📞 <a href="tel:+82648028000">+82 64-802-8000</a>（官方詢問電話，部分網站標示 064-802-8020）　地址：제주시 조천읍 번영로 1278-169</div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-time">11:15–12:30</div>
+      <div class="tl-time">12:30–13:30</div>
       <div class="tl-card">
-        <div class="tl-name">午餐｜Welcome Kitchen 松堂村義式餐廳</div>
-        <div class="tl-desc">與 Sorang 門牌相鄰（2250 / 2253），步行即達。奶油培根義大利麵、漢堡排等洋食全不辣。</div>
-        <div class="tl-tel">📞 <a href="tel:+821035784631">+82 10-3578-4631</a> 地址：제주시 구좌읍 중산간동로 2250</div>
+        <div class="tl-name">午餐｜교래손칼국수（원조교래손칼국수）</div>
+        <div class="tl-desc">Eco Land 附近的名店，手工綠色麵條配濃郁土雞湯底，招牌是토종닭칼국수（土雞刀削麵），也有바지락칼국수（蛤蠣麵）。湯頭是雞湯底，我沒逐項確認辣度，泡菜可能偏辣，請孩子別碰。有兒童椅、大停車場，可刷卡。</div>
+        <div class="tl-meta">
+          <span class="tag note">10:30–17:00，週二公休（11/28 週六正常）</span>
+          <span class="tag warn">常客滿要排隊，資料建議 15:00 前預約</span>
+        </div>
+        <div class="tl-tel">📞 <a href="tel:+82647829870">+82 64-782-9870</a>　地址：제주시 조천읍 비자림로 645</div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-time">12:30–13:15</div>
+      <div class="tl-time">13:45–15:00</div>
       <div class="tl-card">
-        <div class="tl-name">移動｜松堂 → 이마트 신제주점 (新濟州 Emart)</div>
-        <div class="tl-desc">往濟州市區前進，車程約 45 分鐘。</div>
+        <div class="tl-name">산굼부리 山君不離 天然火山口</div>
+        <div class="tl-desc">和午餐店同在 비자림로 上，開車過去很近（距離我沒查證）。天然紀念物第 263 號火山口，步道平緩，孩子輕鬆走完，11 月底有芒草景觀，登頂可眺望城山日出峰與漢拏山。建議停留約 1 小時。</div>
+        <div class="tl-meta"><span class="tag note">11–2 月 09:00–17:40（最後入場 17:00）</span><span class="tag note">兒童票 ₩3,000</span><span class="tag note">免費停車</span></div>
+        <div class="tl-tel">📞 <a href="tel:+82647837870">+82 64-783-7870</a>　地址：제주시 조천읍 비자림로 768</div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-time">13:15–15:30</div>
+      <div class="tl-time">15:00–15:45</div>
+      <div class="tl-card">
+        <div class="tl-name">移動｜산굼부리 → 이마트 신제주점（新濟州 Emart）</div>
+        <div class="tl-desc">往濟州市區前進，車程我估約 30–40 分鐘，沒有查證。</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">15:45–17:15</div>
       <div class="tl-card">
         <div class="tl-name">🛒 이마트 신제주점 新濟州 Emart 超市採購</div>
-        <div class="tl-desc">約 2 小時悠閒採購濟州限定零食、泡麵、海苔伴手禮，可退稅，也可讓孩子自選零食；逛不完或逛完得早，都可以提早出發去看秀。採購的東西先放車上。</div>
+        <div class="tl-desc">約 1.5 小時採購濟州限定零食、泡麵、海苔伴手禮，可退稅，也可讓孩子自選零食。採購的東西先放車上。</div>
         <div class="tl-tel">📞 <a href="tel:+82647290234">+82 64-729-0234</a>　地址：제주시 노형동</div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-time">15:30–16:10</div>
-      <div class="tl-card">
-        <div class="tl-name">移動｜Emart → 濟州亂打秀劇場</div>
-        <div class="tl-desc">開車前往 선돌목동길，車程我估約 15–20 分鐘（未查證），含停車與換票，請在 16:10 前抵達。</div>
-      </div>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-dot must"></div>
-      <div class="tl-time">16:30–18:00</div>
-      <div class="tl-card must-card">
-        <div class="tl-name">🎭 濟州亂打秀 NANTA Show</div>
-        <div class="tl-desc">韓國經典無言喜劇，結合廚房打擊樂與雜技，非常適合 6、8 歲孩子觀賞！請於 16:20 前完成換票入座。公演時間約 90 分鐘（16:30–18:00）。</div>
-        <div class="tl-meta"><span class="tag warn">16:20 前入座完成</span><span class="tag note">票價：A席 50,000 / 兒童 30,000 韓元</span><span class="tag warn">nanta.co.kr 提前訂票，11/28 場次以官網確認</span></div>
-        <div class="tl-tel">📞 <a href="tel:+82647238878">+82 64-723-8878</a>　導航搜尋「제주난타전용관」　地址：제주시 선돌목동길 56-26　訂票：nanta.co.kr</div>
-      </div>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-time">18:30–19:45</div>
+      <div class="tl-time">17:30–19:00</div>
       <div class="tl-card">
         <div class="tl-name">晚餐｜88돼지 88烤肉 炭火黑豬肉（연동）</div>
-        <div class="tl-desc">亂打秀結束後開車前往 연동（신제주一帶）。炭火烤黑豬五花（오겹살），評論形容油脂入口即化；孩子吃烤肉搭白飯即可，其他配菜請先確認辣度。這間營業到凌晨，時間不是問題。Hotel Leo 也在新濟州這一帶，晚餐後回飯店應該順路，但兩者距離我沒查證。</div>
+        <div class="tl-desc">Emart 採購後開車前往 연동（신제주一帶），車程我沒查證。炭火烤黑豬五花（오겹살），評論形容油脂入口即化；孩子吃烤肉搭白飯即可，其他配菜請先確認辣度。這間營業到凌晨，時間不是問題。Hotel Leo 也在新濟州這一帶，晚餐後回飯店應該順路，但兩者距離我沒查證。</div>
         <div class="tl-meta">
           <span class="tag note">16:00–05:00（週二至週日）</span>
           <span class="tag warn">營業時間是舊資料，需再確認</span>
@@ -797,7 +830,7 @@ footer{
 
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-time">20:15</div>
+      <div class="tl-time">19:30</div>
       <div class="tl-card">
         <div class="tl-name">入住 Hotel Leo 利奧酒店</div>
         <div class="tl-desc">近機場、免費停車、地板暖氣。</div>
@@ -915,6 +948,112 @@ footer{
         <div class="tl-desc">平安返抵台灣！</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ================= PAYMENT ================= -->
+<section class="pay-section wrap" id="pay">
+  <div class="pay-head">
+    <h2>💳 支付與刷卡回饋（2026 年 11 月）</h2>
+    <p>行程是 11/25–11/29，下面幾張卡的活動多數涵蓋到 2026/12/31。內容整理自 2026 年 10–11 月的銀行頁面與比較網站；登錄、名額與上限常常調整，刷之前請再看一次各銀行公告。</p>
+  </div>
+
+  <div class="pay-plan">
+    <h4>怎麼分工（我的建議）</h4>
+    <ul>
+      <li><strong>店家有支援 LINE Pay 時</strong>：用永豐 DAWAY 綁 LINE Pay，回饋最高。店家有沒有支援，要看店門口標示；濟州各家店我沒有逐間查證。</li>
+      <li><strong>其他實體刷卡</strong>：用星展 eco（韓國實體商店 5%）。</li>
+      <li><strong>第三張備用</strong>：富邦 J 卡（JCB），登錄後實體最高 6%。JCB 在韓國的受理店家比 Visa／Mastercard 少，記得帶一張備用卡。</li>
+      <li><strong>市場小吃攤</strong>：偶來市場、翰林市場常以現金為主（一般經驗，沒逐攤查證），帶些韓元現金。</li>
+      <li><strong>結帳時選韓元（KRW）</strong>，不要選台幣結算，否則會被加收匯率差與手續費。</li>
+    </ul>
+  </div>
+
+  <div class="pay-grid">
+    <div class="pay-card">
+      <span class="pay-top">LINE Pay 首選</span>
+      <h4>永豐 DAWAY 卡 × LINE Pay</h4>
+      <div class="pay-sub">回饋為 LINE POINTS｜活動至 2026/12/31</div>
+      <h5>一般海外消費</h5>
+      <ul>
+        <li>基礎 2.5%，無上限</li>
+        <li>升等 DAWAY GO 後綁 LINE Pay 加碼 1.5%，<strong>上限 300 點／帳單週期</strong>（約可刷 NT$20,000）→ 共 4%</li>
+        <li>符合資格的新戶再加碼 6%，<strong>上限 500 點／帳單週期</strong>（約可刷 NT$8,333）→ 最高 10%</li>
+      </ul>
+      <h5>韓國指定店家（2026/10/1–12/31，韓國當地時間）</h5>
+      <ul>
+        <li><strong>吃喝補給</strong>（超商、餐飲）最高 26.5% ＝ 2.5% ＋ 1.5% ＋ LINE Pay 加碼 5%（100 點／月）＋ Visa 加碼 10%（200 點／月）＋ DAWAY 加碼 7.5%（150 點／月）</li>
+        <li><strong>旅遊購物</strong>（百貨、免稅、服飾、美妝、景點、選物等）最高 9.5% ＝ 2.5% ＋ 1.5% ＋ Visa 加碼 3%（150 點／月）＋ DAWAY 加碼 2.5%（125 點／月）</li>
+        <li>加碼點數每月限量，發完為止；最高數字是各層加總，不是每筆都拿得到</li>
+      </ul>
+      <h5>出發前要做</h5>
+      <ul>
+        <li>升等 DAWAY GO：我查到的條件是永豐帳戶自動扣繳、電子帳單、永豐網銀會員、投資屬性問卷，要在帳單結帳月底前做完（2026/2 的資料，可能已調整）</li>
+        <li>在 LINE Pay「設定」→「服務條款」→「行銷資訊提供政策」勾選同意，否則不符活動資格</li>
+        <li>分期消費沒有回饋</li>
+      </ul>
+    </div>
+
+    <div class="pay-card">
+      <span class="pay-top">實體刷卡主力</span>
+      <h4>星展 eco 永續卡</h4>
+      <div class="pay-sub">Mastercard｜現金積點</div>
+      <h5>回饋</h5>
+      <ul>
+        <li>國內外一般消費 1%，無上限</li>
+        <li>韓國實體商店（刷實體卡，或用 Apple Pay／Samsung Pay）加碼 4% → <strong>5%</strong>，2026/07/01–12/31</li>
+        <li><strong>加碼 4% 上限 600 點／每期帳單</strong>（約可刷 NT$15,000）</li>
+        <li>海外實體餐廳：2026/9/1–12/31 登錄後當月最高 10%，上限我沒查到，請看活動細則</li>
+      </ul>
+      <h5>注意</h5>
+      <ul>
+        <li>網路購票（例如 Klook）不算「實體商店」，只有 1%</li>
+        <li>海外交易手續費 1.5%（Mr.Market 整理），算淨回饋時要扣掉</li>
+      </ul>
+    </div>
+
+    <div class="pay-card">
+      <span class="pay-top">JCB 備用</span>
+      <h4>富邦 J 卡（JCB）</h4>
+      <div class="pay-sub">J POINTS／J Cash／JU 卡都適用</div>
+      <h5>回饋</h5>
+      <ul>
+        <li>日韓泰一般消費 3%，無上限：要設定富邦帳戶自動扣繳，或申請電子帳單並取消紙本帳單</li>
+        <li>日韓泰實體消費加碼 3% → 最高 <strong>6%</strong>：要先登錄、單筆滿 NT$1,000、<strong>每季上限 NT$1,000</strong>（約可刷 NT$33,333）、名額有限</li>
+      </ul>
+      <h5>注意</h5>
+      <ul>
+        <li>各網站對 6% 加碼的期間說法不一，2026/10–11 的幾篇文章寫第 4 季仍有；請以富邦官網公告為準</li>
+        <li>JCB 在韓國小店可能不收，別當唯一的卡</li>
+        <li>另有文章提到永豐 JCB 現金回饋卡 7%（每季可刷 NT$20,000、上限 NT$1,000，至 2026/12/31），只有單一來源，請自行查證</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pay-table-wrap">
+    <table class="pay-table">
+      <thead><tr><th>卡片</th><th>韓國回饋</th><th>上限</th><th>要做的事</th><th>期限</th></tr></thead>
+      <tbody>
+        <tr><td>永豐 DAWAY（綁 LINE Pay）</td><td>升等後 4%；新戶最高 10%；指定店家 9.5%／26.5%</td><td>1.5% 加碼 300 點／期；新戶 6% 加碼 500 點／期；指定店家各項 100–200 點／月</td><td>升等 DAWAY GO、同意行銷條款</td><td>2026/12/31</td></tr>
+        <tr><td>星展 eco 永續卡</td><td>實體 5%（1% ＋ 4%）</td><td>4% 加碼 600 點／期（約 NT$15,000）</td><td>實體卡或 Apple／Samsung Pay</td><td>2026/12/31</td></tr>
+        <tr><td>富邦 J 卡（JCB）</td><td>3%；登錄後實體最高 6%</td><td>3% 加碼 NT$1,000／季（約 NT$33,333）</td><td>自動扣繳或電子帳單、登錄、單筆滿 NT$1,000</td><td>以富邦公告為準</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pay-check">
+    <h4>出發前檢查清單</h4>
+    <ul>
+      <li>☐ DAWAY GO 升等完成、LINE Pay 行銷條款已勾選</li>
+      <li>☐ 富邦 J 卡完成登錄，並設定自動扣繳或電子帳單</li>
+      <li>☐ 星展海外餐廳活動登錄（有需要的話）</li>
+      <li>☐ 查一下各卡的帳單結帳日：上限是以「帳單週期」計算，如果結帳日落在 11/25–11/29 之間，這趟消費會被拆成兩期，每期上限各算一次（這是我的推論）</li>
+      <li>☐ 確認各卡海外刷卡功能與額度，帶一張 Visa／Mastercard 備用，並準備少量韓元現金</li>
+    </ul>
+  </div>
+
+  <div class="pay-src">
+    資料來源（2026 年 10–11 月）：永豐銀行 DAWAY 卡頁面、iCard.AI、Money101、Roo.Cash、理財學伴；星展銀行 eco 永續卡官網、Mr.Market 市場先生；卡優新聞網、Mr.Market 富邦 J 卡評測。各家對活動期間與上限的說法偶有出入，最後以銀行官方公告為準。
   </div>
 </section>
 
